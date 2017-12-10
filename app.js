@@ -37,7 +37,7 @@ function multiply(a,b){ //eslint-disable-line
   return [theProduct, message];
 }
 
-// TODO: Here is the test for multiply(); uncomment it to run it
+// TODO: DONE
 testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
@@ -53,13 +53,19 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
-// TODO: Write your code here
+// TODO: DONE
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-
+  var firstSum = sum(a, b)[0];
+  var theSum = sum(firstSum, c)[0];
+  var firstProduct = multiply(a, b)[0];
+  var theProduct = multiply(firstProduct, c)[0];
+  var message = a + ' and ' + b + ' and ' + c + ' sum to ' + theSum + '.';
+  var messageOne = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + theProduct + '.';
+  return [theSum, theProduct, message, messageOne];
 }
 
-// TODO: Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+// TODO: DONE
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -76,8 +82,7 @@ Test this function by hand in the console to get it working, and when you think 
 // TODO: Write your code here
 var testArray = [2,3,4]; //eslint-disable-line
 
-function sumArray(testArray){ //eslint-disable-line
-
+function sumArray(testArray){
 }
 
 // TODO: Here is the test for sumArray(); uncomment it to run it
